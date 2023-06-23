@@ -11,13 +11,13 @@ namespace WebApplication2.Controllers
     public class studentController : ApiController
     {
         jagadeeshEntities JagadeeshEntities = new jagadeeshEntities();
-
+        //get student
         public List<student> Getstudents()
         {
             List<student> student = JagadeeshEntities.students.ToList();
             return student;
         }
-
+        
         public student GetstudentsByID(int id)
         {
             student std = JagadeeshEntities.students.Find(id);
